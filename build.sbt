@@ -1,4 +1,4 @@
-enablePlugins(GatlingPlugin)
+enablePlugins(GatlingPlugin, FrontLinePlugin)
 
 scalaVersion := "2.12.12"
 
@@ -8,3 +8,5 @@ scalacOptions := Seq(
 
 libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.4.1" % "test,it"
 libraryDependencies += "io.gatling"            % "gatling-test-framework"    % "3.4.1" % "test,it"
+
+ThisBuild / Keys.useCoursier := false
